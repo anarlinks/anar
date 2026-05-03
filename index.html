@@ -14,6 +14,8 @@
             display: flex;
             flex-direction: column;
             align-items: center;
+            min-height: 100vh;
+            justify-content: center; /* Центрирование всей карточки на экране */
         }
 
         .container {
@@ -21,103 +23,112 @@
             max-width: 450px;
         }
 
-        .profile-section {
+        /* Единый общий блок с обводкой */
+        .main-card {
+            background: #17212b;
+            border-radius: 28px;
+            padding: 30px 24px;
+            border: 1px solid #303d4d;
+            box-shadow: 0 8px 24px rgba(0,0,0,0.3);
             text-align: center;
-            margin-bottom: 30px;
         }
 
         .profile-img {
             width: 100px;
             height: 100px;
             border-radius: 50%;
-            margin-bottom: 15px;
+            margin-bottom: 10px; /* Уменьшил отступ снизу */
             object-fit: cover;
+            border: 3px solid #2481cc; /* Голубая обводка в цвете ТГ */
+            padding: 2px;
         }
 
-        /* Общий стиль для блоков с рамкой как в оригинале */
-        .content-block {
-            background: #17212b;
-            border-radius: 28px; /* Глубокое скругление */
-            padding: 24px;
-            border: 1px solid #303d4d; /* Та самая обводка */
-            margin-bottom: 20px;
-            box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+        h2 {
+            margin: 0 0 25px 0; /* Поднял выше и отцентрировал */
+            font-size: 22px;
+            font-weight: bold;
         }
 
+        /* Элементы внутри блока */
         .main-btn {
             background: transparent;
             border-radius: 40px;
-            padding: 18px;
+            padding: 16px;
             text-align: center;
             text-decoration: none;
-            color: #4ea4f5; /* Цвет текста кнопки */
+            color: #4ea4f5;
             font-weight: bold;
             display: block;
-            border: 2px solid #2b5278; /* Обводка самой кнопки */
-            font-size: 16px;
+            border: 2px solid #2b5278;
+            font-size: 15px;
             text-transform: uppercase;
-            letter-spacing: 0.5px;
+            margin-bottom: 20px;
         }
 
         .warning-text {
             color: #f6d365;
-            font-size: 14px;
-            margin-bottom: 15px;
+            font-size: 13px;
+            margin-bottom: 12px;
             display: block;
             line-height: 1.4;
-            text-align: center;
         }
 
         .copy-box {
             background: #0e1621;
             border-radius: 35px;
-            padding: 6px 6px 6px 20px;
+            padding: 5px 5px 5px 15px;
             display: flex;
             justify-content: space-between;
             align-items: center;
             border: 1px solid #303d4d;
+            margin-bottom: 25px;
         }
 
         .copy-btn {
             background: #ef4444;
             color: white;
             border: none;
-            padding: 10px 20px;
+            padding: 10px 18px;
             border-radius: 25px;
             font-weight: bold;
             cursor: pointer;
-            font-size: 13px;
-            text-transform: uppercase;
+            font-size: 12px;
+        }
+
+        .vpn-section {
+            border-top: 1px solid #303d4d; /* Разделительная линия внутри блока */
+            padding-top: 20px;
+            text-align: left;
         }
 
         .vpn-header {
             display: flex;
             align-items: center;
-            margin-bottom: 20px;
+            margin-bottom: 15px;
         }
 
         .vpn-logo {
-            width: 50px;
-            height: 50px;
-            margin-right: 15px;
-            border-radius: 12px;
+            width: 45px;
+            height: 45px;
+            margin-right: 12px;
+            border-radius: 10px;
         }
 
-        .vpn-title { font-weight: bold; font-size: 19px; }
-        .vpn-subtitle { color: #808b99; font-size: 13px; }
+        .vpn-title { font-weight: bold; font-size: 17px; }
+        .vpn-subtitle { color: #808b99; font-size: 12px; }
 
         .tags {
             display: flex;
-            gap: 8px;
-            margin-bottom: 25px;
+            gap: 6px;
+            margin-bottom: 20px;
             flex-wrap: wrap;
         }
 
         .tag {
             background: #0e1621;
-            padding: 6px 12px;
-            border-radius: 12px;
-            font-size: 12px;
+            padding: 5px 10px;
+            border-radius: 10px;
+            font-size: 11px;
             color: #ffffff;
             border: 1px solid #303d4d;
         }
@@ -128,30 +139,29 @@
             text-decoration: none;
             display: block;
             text-align: center;
-            padding: 16px;
-            border-radius: 30px;
+            padding: 14px;
+            border-radius: 25px;
             font-weight: bold;
-            font-size: 16px;
+            font-size: 15px;
         }
     </style>
 </head>
 <body>
 
     <div class="container">
-        <div class="profile-section">
+        <div class="main-card">
+            <!-- Аватар с голубой обводкой -->
             <img src="https://i.ibb.co/FktrYXr6/photo.jpg" alt="Анар Абдуллаев" class="profile-img">
+            
+            <!-- Центрированное имя -->
             <h2>Анар Абдуллаев</h2>
-        </div>
 
-        <!-- Первый блок с кнопкой перехода -->
-        <div class="content-block">
+            <!-- Кнопка перехода -->
             <a href="https://t.me/anartgbot?start=019defd9-bc94-7685-82e9-9b9b3b59a201" class="main-btn">
-                🔊 ПЕРЕЙТИ В TELEGRAM-КАНАЛ
+                📢 ПЕРЕЙТИ В TELEGRAM-КАНАЛ
             </a>
-        </div>
 
-        <!-- Второй блок с копированием -->
-        <div class="content-block">
+            <!-- Блок копирования -->
             <span class="warning-text">
                 ⚠️ Если Telegram не открывается — подключи Amnezia VPN и найди канал вручную:
             </span>
@@ -159,23 +169,23 @@
                 <span>@anartgbot</span>
                 <button class="copy-btn" onclick="copyText()">📋 КОПИРОВАТЬ</button>
             </div>
-        </div>
 
-        <!-- Третий блок с VPN -->
-        <div class="content-block">
-            <div class="vpn-header">
-                <img src="https://amnezia.org/favicon.ico" class="vpn-logo" alt="logo">
-                <div>
-                    <div class="vpn-title">Amnezia VPN</div>
-                    <div class="vpn-subtitle">Работает там, где другие молчат</div>
+            <!-- VPN секция (теперь часть одной карты) -->
+            <div class="vpn-section">
+                <div class="vpn-header">
+                    <img src="https://amnezia.org/favicon.ico" class="vpn-logo" alt="logo">
+                    <div>
+                        <div class="vpn-title">Amnezia VPN</div>
+                        <div class="vpn-subtitle">Работает там, где другие молчат</div>
+                    </div>
                 </div>
+                <div class="tags">
+                    <span class="tag">🚀 Обход</span>
+                    <span class="tag">🔒 Open Source</span>
+                    <span class="tag">📱 Все устройства</span>
+                </div>
+                <a href="https://amnezia.org/" class="download-btn" target="_blank">🔒 СКАЧАТЬ VPN</a>
             </div>
-            <div class="tags">
-                <span class="tag">🚀 Обход блокировок</span>
-                <span class="tag">🔒 Open Source</span>
-                <span class="tag">📱 Все устройства</span>
-            </div>
-            <a href="https://amnezia.org/" class="download-btn" target="_blank">🔒 СКАЧАТЬ Amnezia VPN</a>
         </div>
     </div>
 
