@@ -12,8 +12,7 @@
             margin: 0;
             padding: 20px;
             display: flex;
-            flex-direction: column;
-            align-items: center;
+            justify-content: center;
         }
 
         .container {
@@ -21,16 +20,24 @@
             max-width: 450px;
         }
 
+        /* Общая внешняя обводка всего контента */
+        .outer-frame {
+            border: 1px solid #1c2733;
+            border-radius: 35px;
+            padding: 25px 15px;
+            background-color: #0e1621;
+        }
+
         .profile-section {
             text-align: center;
-            margin-bottom: 20px;
+            margin-bottom: 25px;
         }
 
         .profile-img {
             width: 100px;
             height: 100px;
             border-radius: 50%;
-            margin-bottom: 8px;
+            margin-bottom: 10px;
             object-fit: cover;
             border: 3px solid #2481cc; /* Голубая обводка ТГ */
             padding: 2px;
@@ -42,19 +49,17 @@
             font-weight: bold;
         }
 
-        /* Общий стиль для рамок */
+        /* Карточки внутри общей обводки */
         .content-card {
             background: #17212b;
             border-radius: 28px;
             padding: 24px;
             border: 1px solid #303d4d;
             margin-bottom: 20px;
-            box-shadow: 0 4px 10px rgba(0,0,0,0.2);
         }
 
-        /* Кнопка в первом блоке */
         .main-btn {
-            background: #1c2733; /* Темный фон кнопки */
+            background: #1c2733;
             border-radius: 40px;
             padding: 16px;
             text-align: center;
@@ -77,7 +82,6 @@
             text-align: center;
         }
 
-        /* Поле копирования */
         .copy-box {
             background: #0e1621;
             border-radius: 35px;
@@ -113,13 +117,13 @@
             border-radius: 12px;
         }
 
-        .vpn-title { font-weight: bold; font-size: 19px; }
+        .vpn-title { font-weight: bold; font-size: 18px; }
         .vpn-subtitle { color: #808b99; font-size: 13px; }
 
         .tags {
             display: flex;
             gap: 8px;
-            margin-bottom: 25px;
+            margin-bottom: 20px;
             flex-wrap: wrap;
         }
 
@@ -148,42 +152,46 @@
 <body>
 
     <div class="container">
-        <!-- Секция профиля -->
-        <div class="profile-section">
-            <img src="https://i.ibb.co/FktrYXr6/photo.jpg" alt="Анар Абдуллаев" class="profile-img">
-            <h2>Анар Абдуллаев</h2>
-        </div>
-
-        <!-- Первая карточка: Кнопка и Копирование -->
-        <div class="content-card">
-            <a href="https://t.me/anartgbot?start=019defd9-bc94-7685-82e9-9b9b3b59a201" class="main-btn">
-                📢 ПЕРЕЙТИ В TELEGRAM-КАНАЛ
-            </a>
-
-            <span class="warning-text">
-                ⚠️ Если Telegram не открывается — подключи Amnezia VPN и найди канал вручную:
-            </span>
-            <div class="copy-box">
-                <span>@anartgbot</span>
-                <button class="copy-btn" onclick="copyText()">📋 КОПИРОВАТЬ</button>
+        <!-- Общая внешняя обводка (как в оригинале) -->
+        <div class="outer-frame">
+            
+            <div class="profile-section">
+                <img src="https://i.ibb.co/FktrYXr6/photo.jpg" alt="Анар Абдуллаев" class="profile-img">
+                <h2>Анар Абдуллаев</h2>
             </div>
-        </div>
 
-        <!-- Вторая карточка: Только VPN -->
-        <div class="content-card">
-            <div class="vpn-header">
-                <img src="https://amnezia.org/favicon.ico" class="vpn-logo" alt="logo">
-                <div>
-                    <div class="vpn-title">Amnezia VPN</div>
-                    <div class="vpn-subtitle">Работает там, где другие молчат</div>
+            <!-- Блок 1 -->
+            <div class="content-card">
+                <a href="https://t.me/anartgbot?start=019defd9-bc94-7685-82e9-9b9b3b59a201" class="main-btn">
+                    📢 ПЕРЕЙТИ В TELEGRAM-КАНАЛ
+                </a>
+
+                <span class="warning-text">
+                    ⚠️ Если Telegram не открывается — подключи Amnezia VPN и найди канал вручную:
+                </span>
+                <div class="copy-box">
+                    <span>@anartgbot</span>
+                    <button class="copy-btn" onclick="copyText()">📋 КОПИРОВАТЬ</button>
                 </div>
             </div>
-            <div class="tags">
-                <span class="tag">🚀 Обход блокировок</span>
-                <span class="tag">🔒 Open Source</span>
-                <span class="tag">📱 Все устройства</span>
+
+            <!-- Блок 2 (Отделенный Amnezia VPN) -->
+            <div class="content-card">
+                <div class="vpn-header">
+                    <img src="https://amnezia.org/favicon.ico" class="vpn-logo" alt="logo">
+                    <div>
+                        <div class="vpn-title">Amnezia VPN</div>
+                        <div class="vpn-subtitle">Работает там, где другие молчат</div>
+                    </div>
+                </div>
+                <div class="tags">
+                    <span class="tag">🚀 Обход блокировок</span>
+                    <span class="tag">🔒 Open Source</span>
+                    <span class="tag">📱 Все устройства</span>
+                </div>
+                <a href="https://amnezia.org/" class="download-btn" target="_blank">🔒 СКАЧАТЬ Amnezia VPN</a>
             </div>
-            <a href="https://amnezia.org/" class="download-btn" target="_blank">🔒 СКАЧАТЬ Amnezia VPN</a>
+
         </div>
     </div>
 
