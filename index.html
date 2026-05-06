@@ -17,9 +17,10 @@
 
         .container {
             width: 100%;
-            max-width: 500px;
+            max-width: 480px;
         }
 
+        /* Общая внешняя обводка */
         .outer-frame {
             border: 1px solid #1c2733;
             border-radius: 35px;
@@ -101,39 +102,47 @@
             font-size: 12px;
         }
 
+        /* VPN блок - точное соответствие */
         .vpn-header {
             display: flex;
             align-items: center;
             margin-bottom: 20px;
+            text-align: left;
         }
 
         .vpn-logo {
             width: 50px;
             height: 50px;
             margin-right: 15px;
-            border-radius: 12px;
+            border-radius: 14px;
+            object-fit: cover;
         }
 
-        .vpn-title { font-weight: bold; font-size: 18px; }
-        .vpn-subtitle { color: #808b99; font-size: 13px; }
+        .vpn-title { font-weight: bold; font-size: 20px; margin-bottom: 2px; }
+        .vpn-subtitle { color: #808b99; font-size: 14px; }
 
         .tags {
             display: flex;
             justify-content: space-between;
-            gap: 5px;
-            margin-bottom: 20px;
+            gap: 8px;
+            margin-bottom: 25px;
         }
 
+        /* Теги как на Снимок экрана 00.42.10.png */
         .tag {
-            background: #0e1621;
-            padding: 6px 8px;
-            border-radius: 10px;
-            font-size: 11px;
+            background: #0e1621; /* Глубокий черный фон */
+            padding: 10px 14px;
+            border-radius: 18px; /* Сильное скругление */
+            font-size: 13px;
             color: #ffffff;
-            border: 1px solid #303d4d;
+            border: none;
             white-space: nowrap;
             flex: 1;
             text-align: center;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: 500;
         }
 
         .download-btn {
@@ -143,17 +152,9 @@
             display: block;
             text-align: center;
             padding: 16px;
-            border-radius: 30px;
+            border-radius: 35px;
             font-weight: bold;
             font-size: 16px;
-        }
-
-        /* Стиль для новых изображений */
-        .banner-img {
-            width: 100%;
-            border-radius: 20px;
-            margin-bottom: 20px;
-            display: block;
         }
     </style>
 </head>
@@ -163,8 +164,6 @@
         <div class="outer-frame">
             
             <div class="profile-section">
-                <img src="https://i.ibb.co/fd6XcbWc/top.jpg" class="banner-img" alt="banner top">
-                
                 <img src="https://i.ibb.co/FktrYXr6/photo.jpg" alt="Анар Абдуллаев" class="profile-img">
                 <h2>Анар Абдуллаев</h2>
             </div>
@@ -185,21 +184,19 @@
 
             <div class="content-card">
                 <div class="vpn-header">
-                    <img src="https://amnezia.org/favicon.ico" class="vpn-logo" alt="logo">
+                    <img src="https://i.ibb.co/1fq8YL88/vpn-logo.jpg" class="vpn-logo" alt="logo">
                     <div>
                         <div class="vpn-title">Amnezia VPN</div>
                         <div class="vpn-subtitle">Работает там, где другие молчат</div>
                     </div>
                 </div>
                 <div class="tags">
-                    <span class="tag">🚀 Обход</span>
-                    <span class="tag">🔒 Open Source</span>
-                    <span class="tag">📱 Все устройства</span>
+                    <div class="tag">🚀 Обход блокировок</div>
+                    <div class="tag">🔒 Open Source</div>
+                    <div class="tag">📱 Все устройства</div>
                 </div>
                 <a href="https://amnezia.org/" class="download-btn" target="_blank">🔒 СКАЧАТЬ Amnezia VPN</a>
             </div>
-
-            <img src="https://i.ibb.co/1fq8YL88/bottom.jpg" class="banner-img" alt="banner bottom" style="margin-bottom: 0; margin-top: 20px;">
 
         </div>
     </div>
