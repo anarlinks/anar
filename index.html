@@ -17,14 +17,13 @@
 
         .container {
             width: 100%;
-            max-width: 480px;
+            max-width: 520px; /* Увеличил ширину контейнера */
         }
 
-        /* Общая внешняя обводка */
         .outer-frame {
             border: 1px solid #1c2733;
             border-radius: 35px;
-            padding: 25px 20px;
+            padding: 25px 15px; /* Немного ужал боковые отступы */
             background-color: #0e1621;
         }
 
@@ -52,7 +51,7 @@
         .content-card {
             background: #17212b;
             border-radius: 28px;
-            padding: 24px;
+            padding: 24px 15px; /* Уменьшил боковые отступы внутри карточки */
             border: 1px solid #303d4d;
             margin-bottom: 20px;
         }
@@ -102,12 +101,11 @@
             font-size: 12px;
         }
 
-        /* VPN блок - точное соответствие */
         .vpn-header {
             display: flex;
             align-items: center;
             margin-bottom: 20px;
-            text-align: left;
+            padding-left: 10px;
         }
 
         .vpn-logo {
@@ -123,19 +121,17 @@
 
         .tags {
             display: flex;
-            justify-content: space-between;
-            gap: 8px;
+            justify-content: center;
+            gap: 6px; /* Оптимальный зазор */
             margin-bottom: 25px;
         }
 
-        /* Теги как на Снимок экрана 00.42.10.png */
         .tag {
-            background: #0e1621; /* Глубокий черный фон */
-            padding: 10px 14px;
-            border-radius: 18px; /* Сильное скругление */
-            font-size: 13px;
+            background: #0e1621;
+            padding: 10px 8px; /* Уменьшил боковые отступы в тегах */
+            border-radius: 18px;
+            font-size: 12px; /* Чуть-чуть уменьшил шрифт */
             color: #ffffff;
-            border: none;
             white-space: nowrap;
             flex: 1;
             text-align: center;
@@ -155,6 +151,7 @@
             border-radius: 35px;
             font-weight: bold;
             font-size: 16px;
+            margin: 0 10px;
         }
     </style>
 </head>
@@ -191,11 +188,11 @@
                     </div>
                 </div>
                 <div class="tags">
-                    <div class="tag">🚀 Обход блокировок</div>
+                    <div class="tag">🚀 Обход</div>
                     <div class="tag">🔒 Open Source</div>
                     <div class="tag">📱 Все устройства</div>
                 </div>
-                <a href="https://amnezia.org/" class="download-btn" target="_blank">🔒 СКАЧАТЬ Amnezia VPN</a>
+                <a href="https://amnezia.org/" class="download-btn" target="_blank">🔒 СКАЧАТЬ VPN</a>
             </div>
 
         </div>
