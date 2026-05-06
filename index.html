@@ -17,14 +17,13 @@
 
         .container {
             width: 100%;
-            max-width: 450px;
+            max-width: 500px; /* Увеличил ширину, чтобы влезли теги */
         }
 
-        /* Общая внешняя обводка всего контента */
         .outer-frame {
             border: 1px solid #1c2733;
             border-radius: 35px;
-            padding: 25px 15px;
+            padding: 25px 20px;
             background-color: #0e1621;
         }
 
@@ -39,7 +38,7 @@
             border-radius: 50%;
             margin-bottom: 10px;
             object-fit: cover;
-            border: 3px solid #2481cc; /* Голубая обводка ТГ */
+            border: 3px solid #2481cc;
             padding: 2px;
         }
 
@@ -49,7 +48,6 @@
             font-weight: bold;
         }
 
-        /* Карточки внутри общей обводки */
         .content-card {
             background: #17212b;
             border-radius: 28px;
@@ -103,7 +101,6 @@
             font-size: 12px;
         }
 
-        /* VPN блок */
         .vpn-header {
             display: flex;
             align-items: center;
@@ -120,20 +117,24 @@
         .vpn-title { font-weight: bold; font-size: 18px; }
         .vpn-subtitle { color: #808b99; font-size: 13px; }
 
+        /* Настройка тегов в одну строку */
         .tags {
             display: flex;
-            gap: 8px;
+            justify-content: space-between; /* Распределяем равномерно */
+            gap: 5px;
             margin-bottom: 20px;
-            flex-wrap: wrap;
         }
 
         .tag {
             background: #0e1621;
-            padding: 6px 12px;
-            border-radius: 12px;
-            font-size: 12px;
+            padding: 6px 8px;
+            border-radius: 10px;
+            font-size: 11px; /* Слегка уменьшил шрифт для вместимости */
             color: #ffffff;
             border: 1px solid #303d4d;
+            white-space: nowrap; /* Запрет переноса текста внутри тега */
+            flex: 1; /* Одинаковая ширина тегов */
+            text-align: center;
         }
 
         .download-btn {
@@ -152,15 +153,13 @@
 <body>
 
     <div class="container">
-        <!-- Общая внешняя обводка (как в оригинале) -->
         <div class="outer-frame">
             
             <div class="profile-section">
-                <img src="https://i.ibb.co/FktrYXr6/photo.jpg" alt="Анар Абдуллаев" class="profile-img">
+                <img src="https://ibb.co/1fq8YL88" alt="Анар Абдуллаев" class="profile-img">
                 <h2>Анар Абдуллаев</h2>
             </div>
 
-            <!-- Блок 1 -->
             <div class="content-card">
                 <a href="https://t.me/anartgbot?start=019defd9-bc94-7685-82e9-9b9b3b59a201" class="main-btn">
                     📢 ПЕРЕЙТИ В TELEGRAM-КАНАЛ
@@ -175,7 +174,6 @@
                 </div>
             </div>
 
-            <!-- Блок 2 (Отделенный Amnezia VPN) -->
             <div class="content-card">
                 <div class="vpn-header">
                     <img src="https://amnezia.org/favicon.ico" class="vpn-logo" alt="logo">
@@ -189,7 +187,7 @@
                     <span class="tag">🔒 Open Source</span>
                     <span class="tag">📱 Все устройства</span>
                 </div>
-                <a href="https://amnezia.org/" class="download-btn" target="_blank">🔒 СКАЧАТЬ Amnezia VPN</a>
+                <a href="https://storage.googleapis.com/amnezia/amnezia.org?m-path=premium&arf=ZCHZ8WMP11JRCMSN" class="download-btn" target="_blank">🔒 СКАЧАТЬ Amnezia VPN</a>
             </div>
 
         </div>
