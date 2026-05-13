@@ -88,11 +88,6 @@
             border: 1px solid rgba(91, 154, 255, 0.3);
         }
 
-        .tg-btn:active {
-            background: #1a2a45;
-            transform: scale(0.98);
-        }
-
         .fallback {
             background: rgba(18, 22, 32, 0.7);
             border-radius: 24px;
@@ -174,7 +169,7 @@
         }
 
         .vpn-icon img {
-            width: 60%;
+            width: 24px;
         }
 
         .vpn-title {
@@ -230,7 +225,8 @@
             overflow: hidden;
         }
 
-        .casino-item.iris {
+        /* Стиль SPINTO в розовом оформлении */
+        .casino-item.spinto {
             background: radial-gradient(circle at 10% 20%, #2a1a3a, #110c1a);
             border: 1px solid #ff5efb;
             box-shadow: 0 0 25px rgba(255, 94, 251, 0.3);
@@ -243,48 +239,22 @@
             100% { box-shadow: 0 0 5px rgba(255, 94, 251, 0.3); border-color: #ff5efb; }
         }
 
-        .casino-item.iris .casino-name {
+        .casino-item.spinto .casino-name {
             background: linear-gradient(115deg, #ffaaff, #ff5efb);
             -webkit-background-clip: text;
             background-clip: text;
             color: transparent;
-        }
-
-        .casino-item.iris .badge-new {
-            background: #ff5efb20;
-            color: #ffaaff;
-            border: 1px solid #ff5efb;
-        }
-
-        .casino-item.iris .bonus-text {
-            color: #ffaaff;
-        }
-
-        .casino-item.iris .action-btn {
-            background: linear-gradient(95deg, #ff5efb, #c42ee0);
-            color: white;
-            box-shadow: 0 6px 14px rgba(255, 94, 251, 0.4);
-        }
-
-        .casino-header {
-            display: flex;
-            justify-content: space-between;
-            align-items: baseline;
-            flex-wrap: wrap;
-            margin-bottom: 12px;
-        }
-
-        .casino-name {
             font-size: 26px;
             font-weight: 800;
         }
 
         .badge-new {
             font-size: 11px;
-            background: rgba(255, 255, 255, 0.08);
+            background: #ff5efb20;
+            color: #ffaaff;
+            border: 1px solid #ff5efb;
             padding: 5px 14px;
             border-radius: 60px;
-            color: #b0bbdb;
             font-weight: 600;
         }
 
@@ -292,6 +262,7 @@
             font-size: 28px;
             font-weight: 800;
             margin: 12px 0 8px;
+            color: #ffaaff;
         }
 
         .bonus-text span {
@@ -311,6 +282,12 @@
             backdrop-filter: blur(4px);
         }
 
+        /* Выделение "Промокод" розовым */
+        .promocode .label {
+            color: #ffaaff;
+            font-weight: 600;
+        }
+
         .promocode code {
             font-weight: 800;
             color: #ffdf80;
@@ -328,6 +305,9 @@
             font-size: 17px;
             margin-top: 12px;
             transition: 0.2s;
+            background: linear-gradient(95deg, #ff5efb, #c42ee0);
+            color: white;
+            box-shadow: 0 6px 14px rgba(255, 94, 251, 0.4);
         }
 
         .action-btn:active {
@@ -346,3 +326,88 @@
 <body>
 
 <div class="card">
+    <div class="header">
+        <div class="avatar">
+            <img src="https://i.ibb.co/FktrYXr6/photo.jpg" alt="Анар Абдуллаев">
+        </div>
+        <h1>Анар Абдуллаев</h1>
+        <div class="nickname">👇 ЭКСКЛЮЗИВНЫЕ БОНУСЫ 👇</div>
+        <a href="https://t.me/anartgbot?start=258289" class="tg-btn" target="_blank" rel="noreferrer noopener">
+            📢 ПЕРЕЙТИ В TELEGRAM-КАНАЛ
+        </a>
+
+        <div class="fallback">
+            <p>⚠️ Если Telegram не открывается — подключи VPN и найди канал вручную:</p>
+            <div class="copy-row">
+                <span>@anartgbot</span>
+                <button class="copy-btn" onclick="copyChannel()">📋 КОПИРОВАТЬ</button>
+            </div>
+            <div id="toastMsg" class="toast">✅ Скопировано! Вставь в поиск Telegram</div>
+        </div>
+    </div>
+
+    <div class="main-content">
+        <div class="vpn-modern">
+            <div class="vpn-row">
+                <div class="vpn-icon">
+                    <img src="https://amnezia.org/favicon.ico" alt="Amnezia">
+                </div>
+                <div>
+                    <div class="vpn-title">Amnezia VPN</div>
+                    <div class="vpn-desc">Обходит блокировки, работает везде</div>
+                </div>
+            </div>
+            <div class="tags">
+                <span class="tag">⚡ Высокая скорость</span>
+                <span class="tag">🔓 Open source</span>
+                <span class="tag">🛡️ Нет логов</span>
+            </div>
+            <a href="https://storage.googleapis.com/amnezia/amnezia.org?m-path=premium&arf=ZCHZ8WMP11JRCMSN" class="vpn-action" target="_blank" rel="noreferrer noopener">
+                🔓 СКАЧАТЬ Amnezia VPN
+            </a>
+        </div>
+
+        <div class="casino-grid">
+            <div class="casino-item spinto">
+                <div style="display: flex; justify-content: space-between; align-items: baseline; flex-wrap: wrap; margin-bottom: 12px;">
+                    <span class="casino-name">🎰 SPINTO</span>
+                    <span class="badge-new">Новинка!</span>
+                </div>
+                <div class="bonus-text">
+                    600% + 500 FS <span>НА ПЕРВЫЙ ДЕПОЗИТ</span>
+                </div>
+                <div class="promocode">
+                    <span class="label">🔐 ПРОМОКОД:</span> <code>ANARLIVE</code>
+                </div>
+                <div style="font-size: 12px; color: #b0bbdb; margin: 8px 0;">
+                    ✅ Заполни профиль + телефон<br>
+                    ✅ Подтверди e-mail<br>
+                    ✅ Без дубликатов аккаунтов
+                </div>
+                <a href="https://fuguway68.com/c9f4c823e?activation_code=ANARLIVE" class="action-btn" target="_blank" rel="noreferrer noopener">
+                    🚀 ЗАБРАТЬ БОНУС
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <div class="footer">
+        Анар Абдуллаев • Бонусы активируются после регистрации • VPN безлимит
+    </div>
+</div>
+
+<script>
+    function copyChannel() {
+        const text = '@anartgbot';
+        navigator.clipboard.writeText(text).then(() => {
+            const toast = document.getElementById('toastMsg');
+            toast.style.display = 'block';
+            setTimeout(() => {
+                toast.style.display = 'none';
+            }, 2000);
+        });
+    }
+</script>
+
+</body>
+</html>
