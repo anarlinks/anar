@@ -1,224 +1,348 @@
 <!DOCTYPE html>
 <html lang="ru">
 <head>
-
-<!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-3GNHQDDJM3"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-
-  gtag('config', 'G-3GNHQDDJM3');
-</script>
-    
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Анар Абдуллаев | Официальные ссылки</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+    <title>ANAR | Ссылки</title>
     <style>
-        body {
-            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
-            background-color: #0e1621;
-            color: #ffffff;
+        * {
             margin: 0;
-            padding: 20px;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica Neue, sans-serif;
+            background: #0c0f17;
             display: flex;
             justify-content: center;
-        }
-
-        .container {
-            width: 100%;
-            max-width: 520px; /* Увеличил ширину контейнера */
-        }
-
-        .outer-frame {
-            border: 1px solid #1c2733;
-            border-radius: 35px;
-            padding: 25px 15px; /* Немного ужал боковые отступы */
-            background-color: #0e1621;
-        }
-
-        .profile-section {
-            text-align: center;
-            margin-bottom: 25px;
-        }
-
-        .profile-img {
-            width: 100px;
-            height: 100px;
-            border-radius: 50%;
-            margin-bottom: 10px;
-            object-fit: cover;
-            border: 3px solid #2481cc;
-            padding: 2px;
-        }
-
-        h2 {
-            margin: 0;
-            font-size: 22px;
-            font-weight: bold;
-        }
-
-        .content-card {
-            background: #17212b;
-            border-radius: 28px;
-            padding: 24px 15px; /* Уменьшил боковые отступы внутри карточки */
-            border: 1px solid #303d4d;
-            margin-bottom: 20px;
-        }
-
-        .main-btn {
-            background: #1c2733;
-            border-radius: 40px;
-            padding: 16px;
-            text-align: center;
-            text-decoration: none;
-            color: #4ea4f5;
-            font-weight: bold;
-            display: block;
-            border: 1px solid #303d4d;
-            font-size: 15px;
-            text-transform: uppercase;
-            margin-bottom: 20px;
-        }
-
-        .warning-text {
-            color: #f6d365;
-            font-size: 13px;
-            margin-bottom: 15px;
-            display: block;
-            line-height: 1.4;
-            text-align: center;
-        }
-
-        .copy-box {
-            background: #0e1621;
-            border-radius: 35px;
-            padding: 5px 5px 5px 15px;
-            display: flex;
-            justify-content: space-between;
             align-items: center;
-            border: 1px solid #303d4d;
+            min-height: 100vh;
+            padding: 16px;
+        }
+
+        .card {
+            max-width: 520px;
+            width: 100%;
+            background: #121620;
+            border-radius: 40px;
+            overflow: hidden;
+            border: 1px solid rgba(255, 255, 255, 0.05);
+            box-shadow: 0 20px 35px rgba(0, 0, 0, 0.4);
+        }
+
+        .header {
+            padding: 24px 20px 18px;
+            text-align: center;
+            background: #0f131c;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+        }
+
+        .avatar {
+            width: 70px;
+            height: 70px;
+            margin: 0 auto 12px;
+            border-radius: 50%;
+            overflow: hidden;
+            border: 2px solid #ff4d4d;
+            box-shadow: 0 0 18px rgba(255, 77, 77, 0.3);
+        }
+
+        .avatar img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        h1 {
+            font-size: 28px;
+            font-weight: 800;
+            background: linear-gradient(135deg, #fff, #ff5a5a);
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+            margin-bottom: 6px;
+        }
+
+        .nickname {
+            font-size: 13px;
+            color: #9aa4bf;
+            background: rgba(255, 255, 255, 0.05);
+            display: inline-block;
+            padding: 5px 16px;
+            border-radius: 60px;
+            font-weight: 500;
+        }
+
+        .tg-btn {
+            display: block;
+            margin: 18px 0 14px;
+            background: rgba(27, 42, 63, 0.8);
+            padding: 12px;
+            border-radius: 60px;
+            text-decoration: none;
+            color: #5b9aff;
+            font-weight: 700;
+            font-size: 15px;
+            transition: 0.2s;
+            border: 1px solid rgba(91, 154, 255, 0.3);
+        }
+
+        .tg-btn:active {
+            background: #1a2a45;
+            transform: scale(0.98);
+        }
+
+        .fallback {
+            background: rgba(18, 22, 32, 0.7);
+            border-radius: 24px;
+            padding: 12px 16px;
+            border: 1px solid rgba(255, 255, 255, 0.03);
+        }
+
+        .fallback p {
+            font-size: 12px;
+            color: #8e99b3;
+            text-align: center;
+            margin-bottom: 8px;
+        }
+
+        .copy-row {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            background: #0a0c12;
+            border-radius: 60px;
+            padding: 4px 4px 4px 18px;
+        }
+
+        .copy-row span {
+            color: #bfd9ff;
+            font-weight: 500;
+            font-size: 13px;
         }
 
         .copy-btn {
-            background: #ef4444;
-            color: white;
+            background: #ff4d4d;
             border: none;
-            padding: 10px 18px;
-            border-radius: 25px;
-            font-weight: bold;
+            color: white;
+            font-weight: 600;
+            padding: 6px 20px;
+            border-radius: 60px;
             cursor: pointer;
             font-size: 12px;
         }
 
-        .vpn-header {
+        .toast {
+            background: #2f8b4c;
+            color: white;
+            text-align: center;
+            padding: 6px;
+            border-radius: 60px;
+            font-size: 11px;
+            margin-top: 8px;
+            display: none;
+        }
+
+        .main-content {
+            padding: 20px 20px 24px;
+        }
+
+        .vpn-modern {
+            background: rgba(18, 22, 32, 0.6);
+            border-radius: 28px;
+            padding: 14px 18px;
+            margin-bottom: 24px;
+            border: 1px solid rgba(255, 255, 255, 0.03);
+        }
+
+        .vpn-row {
             display: flex;
             align-items: center;
-            margin-bottom: 20px;
-            padding-left: 10px;
+            gap: 12px;
+            margin-bottom: 10px;
         }
 
-        .vpn-logo {
-            width: 50px;
-            height: 50px;
-            margin-right: 15px;
+        .vpn-icon {
+            width: 42px;
+            height: 42px;
+            background: rgba(255, 255, 255, 0.04);
             border-radius: 14px;
-            object-fit: cover;
+            display: flex;
+            align-items: center;
+            justify-content: center;
         }
 
-        .vpn-title { font-weight: bold; font-size: 20px; margin-bottom: 2px; }
-        .vpn-subtitle { color: #808b99; font-size: 14px; }
+        .vpn-icon img {
+            width: 60%;
+        }
+
+        .vpn-title {
+            font-size: 18px;
+            font-weight: 700;
+            color: #fff;
+        }
+
+        .vpn-desc {
+            font-size: 11px;
+            color: #8e99b3;
+        }
 
         .tags {
             display: flex;
-            justify-content: center;
-            gap: 6px; /* Оптимальный зазор */
-            margin-bottom: 25px;
+            flex-wrap: wrap;
+            gap: 8px;
+            margin: 10px 0;
         }
 
         .tag {
-            background: #0e1621;
-            padding: 10px 8px; /* Уменьшил боковые отступы в тегах */
-            border-radius: 18px;
-            font-size: 12px; /* Чуть-чуть уменьшил шрифт */
-            color: #ffffff;
-            white-space: nowrap;
-            flex: 1;
-            text-align: center;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-weight: 500;
+            background: rgba(255, 255, 255, 0.04);
+            padding: 4px 12px;
+            border-radius: 60px;
+            font-size: 11px;
+            color: #b0bbdb;
         }
 
-        .download-btn {
-            background: #2b5278;
-            color: white;
-            text-decoration: none;
+        .vpn-action {
             display: block;
+            background: rgba(27, 42, 63, 0.7);
             text-align: center;
-            padding: 16px;
-            border-radius: 35px;
-            font-weight: bold;
-            font-size: 16px;
-            margin: 0 10px;
+            padding: 10px;
+            border-radius: 60px;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 13px;
+            color: #7cb8ff;
+            transition: 0.2s;
+        }
+
+        .casino-grid {
+            display: flex;
+            flex-direction: column;
+            gap: 18px;
+        }
+
+        .casino-item {
+            border-radius: 28px;
+            padding: 20px;
+            transition: 0.2s;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .casino-item.iris {
+            background: radial-gradient(circle at 10% 20%, #2a1a3a, #110c1a);
+            border: 1px solid #ff5efb;
+            box-shadow: 0 0 25px rgba(255, 94, 251, 0.3);
+            animation: pulseGlow 2s infinite;
+        }
+
+        @keyframes pulseGlow {
+            0% { box-shadow: 0 0 5px rgba(255, 94, 251, 0.3); border-color: #ff5efb; }
+            50% { box-shadow: 0 0 25px rgba(255, 94, 251, 0.6); border-color: #ffaaff; }
+            100% { box-shadow: 0 0 5px rgba(255, 94, 251, 0.3); border-color: #ff5efb; }
+        }
+
+        .casino-item.iris .casino-name {
+            background: linear-gradient(115deg, #ffaaff, #ff5efb);
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+        }
+
+        .casino-item.iris .badge-new {
+            background: #ff5efb20;
+            color: #ffaaff;
+            border: 1px solid #ff5efb;
+        }
+
+        .casino-item.iris .bonus-text {
+            color: #ffaaff;
+        }
+
+        .casino-item.iris .action-btn {
+            background: linear-gradient(95deg, #ff5efb, #c42ee0);
+            color: white;
+            box-shadow: 0 6px 14px rgba(255, 94, 251, 0.4);
+        }
+
+        .casino-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: baseline;
+            flex-wrap: wrap;
+            margin-bottom: 12px;
+        }
+
+        .casino-name {
+            font-size: 26px;
+            font-weight: 800;
+        }
+
+        .badge-new {
+            font-size: 11px;
+            background: rgba(255, 255, 255, 0.08);
+            padding: 5px 14px;
+            border-radius: 60px;
+            color: #b0bbdb;
+            font-weight: 600;
+        }
+
+        .bonus-text {
+            font-size: 28px;
+            font-weight: 800;
+            margin: 12px 0 8px;
+        }
+
+        .bonus-text span {
+            font-size: 14px;
+            font-weight: normal;
+            color: #8e99b3;
+        }
+
+        .promocode {
+            background: rgba(0, 0, 0, 0.4);
+            padding: 8px 14px;
+            border-radius: 60px;
+            display: inline-block;
+            font-size: 13px;
+            margin: 10px 0;
+            font-family: monospace;
+            backdrop-filter: blur(4px);
+        }
+
+        .promocode code {
+            font-weight: 800;
+            color: #ffdf80;
+            font-size: 14px;
+        }
+
+        .action-btn {
+            display: block;
+            width: 100%;
+            text-align: center;
+            padding: 14px;
+            border-radius: 60px;
+            font-weight: 700;
+            text-decoration: none;
+            font-size: 17px;
+            margin-top: 12px;
+            transition: 0.2s;
+        }
+
+        .action-btn:active {
+            transform: scale(0.97);
+        }
+
+        .footer {
+            padding: 12px 20px;
+            text-align: center;
+            font-size: 10px;
+            color: #5b6883;
+            border-top: 1px solid rgba(255, 255, 255, 0.03);
         }
     </style>
 </head>
 <body>
 
-    <div class="container">
-        <div class="outer-frame">
-            
-            <div class="profile-section">
-                <img src="https://i.ibb.co/FktrYXr6/photo.jpg" alt="Анар Абдуллаев" class="profile-img">
-                <h2>Анар Абдуллаев</h2>
-            </div>
-
-            <div class="content-card">
-    
-
-<a href="https://vk.cc/cXxjDP" 
-   class="main-btn" 
-   onclick="gtag('event', 'click_tg_main');">
-    📢 ПЕРЕЙТИ В TELEGRAM-КАНАЛ
-</a>
-
-              
-                <span class="warning-text">
-                    ⚠️ Если Telegram не открывается — подключи Amnezia VPN и найди канал вручную:
-                </span>
-                <div class="copy-box">
-                    <span>@anartgbot</span>
-                    <button class="copy-btn" onclick="copyText()">📋 КОПИРОВАТЬ</button>
-                </div>
-            </div>
-
-            <div class="content-card">
-                <div class="vpn-header">
-                    <img src="https://i.ibb.co/1fq8YL88/vpn-logo.jpg" class="vpn-logo" alt="logo">
-                    <div>
-                        <div class="vpn-title">Amnezia VPN</div>
-                        <div class="vpn-subtitle">Работает там, где другие молчат</div>
-                    </div>
-                </div>
-                <div class="tags">
-                    <div class="tag">🚀 Обход блоков</div>
-                    <div class="tag">🔒 Open Source</div>
-                    <div class="tag">📱 Все устройства</div>
-                </div>
-                <a href="https://storage.googleapis.com/amnezia/amnezia.org?m-path=premium&arf=ZCHZ8WMP11JRCMSN" class="download-btn" target="_blank">🔒 СКАЧАТЬ VPN</a>
-            </div>
-
-        </div>
-    </div>
-
-    <script>
-        function copyText() {
-            navigator.clipboard.writeText("@anartgbot");
-            alert("Юзернейм скопирован!");
-        }
-    </script>
-</body>
-</html>
+<div class="card">
